@@ -1,0 +1,28 @@
+    @media all{
+        .my-header-grid.ui-grid-b .ui-block-a { width: 20%; }
+        .my-header-grid.ui-grid-b .ui-block-b { width: 60%; }
+        .my-header-grid.ui-grid-b .ui-block-c { width: 20%; }
+        }
+		.ui-grid-b  img {
+			width: 100%;
+			height: auto;
+		} 
+
+
+.ui-grid-a img{
+	width: 100%;
+	height: auto;
+	border-bottom: 0px;
+}
+.addSettings {text-align: center;}
+#addDrinkForm .ui-block-a { width: 70%; }
+#addDrinkForm .ui-block-b { width: 30%; }
+
+.footer-style a{
+	text-decoration: none;
+}
+.footer-style h4 {
+	text-align: center;
+	font-weight: bold;
+	color: white;
+}
