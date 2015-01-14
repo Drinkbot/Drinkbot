@@ -22,6 +22,7 @@
 			<script type="text/javascript" src="js/jquery.mobile-1.4.2.js"></script>
 			<script type="text/javascript" src="js/view.js"></script>
 			<script type="text/javascript" src="js/pour.js"></script>
+			<script type="text/javascript" src="js/functions.js"></script>
 			
 
 
@@ -30,7 +31,7 @@
 	<body>
 		<section id="home" data-role="page" data-theme="a">
 
-					<div data-role="header" data-position="fixed" data-theme="a">
+					<div data-role="header" data-position="fixed"  data-tap-toggle="false" class="header-style" data-theme="a">
 						<div class="my-header-grid ui-grid-b">
 								<div class="ui-block-a">
 									<a href=""><img src="img/recycleIcon.jpg" /></a>
@@ -46,7 +47,7 @@
 					</div>
 					
 					
-					<div data-role="content" id="content" data-theme="a">
+					<div data-role="content" id="content" data-theme="a" class="noLine">
 					   <div class="ui-grid-a">
 							<div class="ui-block-a">
 								<img src="img/drink/Cosmopolitan.jpg" id="cosmopolitan"  />
@@ -67,10 +68,10 @@
 								<img src="img/drink/Mojito.jpg" id="mojito"/>
 							</div>
 							<div class="ui-block-a">
-								<img src="img/drink/MoscowMule.jpg" id="moscowMule"/>
+								<img src="img/drink/P2.jpg" id="p2"/>
 							</div>
 							<div class="ui-block-b">
-								<img src="img/drink/P2.jpg" id="p2"/>
+								<img src="img/drink/MoscowMule.jpg" id="moscowMule"/>
 							</div>
 							<div class="ui-block-a">
 								<img src="img/drink/Screwdriver.jpg" id="screwdriver"/>
@@ -81,14 +82,14 @@
 					   </div>
 					</div>   
 					
-				<div data-role="footer" data-position="fixed" data-theme="b" class="footer-style">
+				<div data-role="footer" data-position="fixed" data-theme="b" class="footer-style" data-tap-toggle="false" >
 					<a href="#settingsSection" data-role="none" ><h4>SETTINGS</h4></a>
 				</div>
 		</section>
 
 		<section id="addSection" data-role="page" data-theme="a">
 
-					<div data-role="header" data-position="fixed" data-theme="a">
+					<div data-role="header" data-position="fixed" data-theme="a"  class="header-style" data-tap-toggle="false" >
 						<div class="my-header-grid ui-grid-b">
 								<div class="ui-block-a">
 									<a href=""><img src="img/recycleIcon.jpg" /></a>
@@ -104,7 +105,7 @@
 					
 					
 					<div data-role="content" data-theme="a" class="addSettings">
-						<h1>Add New Drink</h1>
+						<h2>Add New Drink</h2>
 					   <form name="addDrink" id="addDrinkForm" action="" onsubmit="return addDrink();"  data-ajax="false" >
 									<input type="text" name="drink_name" id="drink_name" value="" placeholder="Drink name"/>
 
@@ -132,7 +133,7 @@
 					
 				</div>   
 					
-				<div data-role="footer" data-position="fixed" data-theme="b" class="footer-style">
+				<div data-role="footer" data-position="fixed" data-theme="b" class="footer-style" data-tap-toggle="false" >
 					<a href="" data-role="none" ><h4>SAVE</h4></a>
 				</div>
 		</section>		
@@ -141,7 +142,7 @@
 		
 		<section id="settingsSection" data-role="page" data-theme="a">
 
-					<div data-role="header" data-position="fixed" data-theme="a">
+					<div data-role="header" data-position="fixed" data-theme="a"  class="header-style" data-tap-toggle="false" >
 						<div class="my-header-grid ui-grid-b">
 								<div class="ui-block-a">
 									<a href=""><img src="img/recycleIcon.jpg" /></a>
@@ -156,8 +157,8 @@
 					</div>
 					
 					
-					<div data-role="content" data-theme="a" class="addSettings">
-						<h1>Settings</h1>
+				<div data-role="content" data-theme="a" class="addSettings">
+						<h2>Settings</h2>
 					    <form class="addSettings" name="settingsForm" id="settingsForm" action="" onsubmit="return settings();"  data-ajax="false" >
 									<br />
 									<label for="unitID" >unitID:</label>
@@ -173,7 +174,7 @@
 					
 				</div>   
 					
-				<div data-role="footer" data-position="fixed" data-theme="b" class="footer-style">
+				<div data-role="footer" data-position="fixed" data-theme="b" class="footer-style" data-tap-toggle="false" >
 					<a href="" data-role="none" ><h4>SAVE</h4></a>
 				</div>
 		</section>		
