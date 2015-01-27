@@ -21,14 +21,13 @@ var pour = (function(module) {
 	
 	function pourFunction(){
 	
-		var coreId = "xxxxx";
-        var accessToken = "xxxxxx";
+		var unitId = $.jStorage.get("unit_ID");
+        var accessToken = $.jStorage.get("access_Token");
         //This builds the URL to the REST API endpoint for the setpumps function
         //with your given coreId
-        var url = "https://api.spark.io/v1/devices/" + coreId + "/setpumps";
+        var url = "https://api.spark.io/v1/devices/" + unitId + "/setpumps";
 		
         //Turn on the alertInfo div to show the user that the pumping is being attempted
-        alert("Order sent");
         //Make the Ajax Call
         $.ajax({
           type: "POST",
@@ -39,9 +38,9 @@ var pour = (function(module) {
           },
 		  success: function (data, textStatus, jqXHR){
 			if(data.return_value == 0){
-				alert ("Order completed");
+				window.plugins.toast.showShortCenter("Order completed");
 			} else {
-				alert ("Error completing order");
+				window.plugins.toast.showShortCenter("Error completing order");
 			}
 		  },
           complete: function (jqxhr, status) {
@@ -55,3 +54,4 @@ var pour = (function(module) {
 	
 	return module;
 }(	pour || {}));
+

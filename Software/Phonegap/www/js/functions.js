@@ -26,9 +26,16 @@
 		
 		
 		function refresh () {
-			//window.plugins.toast.showShortCenter('Refreshing List');
-			alert("refreshing");
-			model.setJson();
+			if (!checkConnection()){
+					alert ("No internet connection detected. Connect to internet and try again to download list.");
+		    } else {
+				if ($.jStorage.get("drink_Database") == null || $.jStorage.get("drink_Database") == ""){
+					alert ("Insert address of the database under settings section");			 
+				 } else {
+					window.plugins.toast.showShortCenter('Loading List');
+					model.setJson();
+				}	
+			}
 		}
 		
 		
@@ -45,7 +52,11 @@
 			states[Connection.CELL]     = 'Cell generic connection';
 			states[Connection.NONE]     = 'No network connection';
 
-			alert('Connection type: ' + states[networkState]);
+			if(networkState == "none"){
+				return false;	
+			} else {
+				return true;
+			}
 }
 
 		function extractAmount (amount){
