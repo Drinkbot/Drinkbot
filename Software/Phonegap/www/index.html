@@ -41,15 +41,14 @@
 					<div data-role="header" data-position="fixed"  data-tap-toggle="false" class="header-style" data-theme="a">
 						<div class="my-header-grid ui-grid-b">
 								<div class="ui-block-a">
-									<a href=""><img src="img/recycleIcon.jpg"  onclick="refresh()"/></a>
+									<a href=""><img src="img/recycleIcon copy.jpg"  onclick="refresh()"/></a>
 								</div>
 								<div class="ui-block-b">
 									<a href=""><img src="img/DrinkbotLogolight.jpg" /></a>
 								</div>
 								<div class="ui-block-c">
-									<a href="#addSection"><img src="img/addIcon.jpg" /></a>
+									<a href="#addSection"><img src="img/addIcon copy1.jpg" /></a>
 								</div>
-					
 						</div>
 					</div>
 					
@@ -61,27 +60,36 @@
 					   
 					</div>   
 					
-				<div data-role="footer" data-position="fixed" data-theme="b" class="footer-style" data-tap-toggle="false" >
-					<a href="#settingsSection" data-role="none" ><h4>SETTINGS</h4></a>
+				<div data-role="footer" data-position="fixed" data-theme="b" class="home-footer-style" data-tap-toggle="false" >
+					<div class="my-footer-grid ui-grid-a">
+								<div class="ui-block-a">
+									<a href="#empty"><img src="img/corkscrew.jpg" /></a>
+								</div>
+								<div class="ui-block-b">
+									<a href="#settingsSection"><img src="img/settings.jpg" /></a>
+								</div>
+						</div>
 				</div>
 		</section>
+		
+		
 
 		<section id="addSection" data-role="page" data-theme="a">
 
-					<div data-role="header" data-position="fixed" data-theme="a"  class="header-style" data-tap-toggle="false" >
+					<div data-role="header" data-position="fixed"  data-tap-toggle="false" class="header-style" data-theme="a">
 						<div class="my-header-grid ui-grid-b">
 								<div class="ui-block-a">
-									<a href=""><img src="img/recycleIcon.jpg" /></a>
+									<a href=""><img src="img/recycleIcon copy.jpg"  onclick="refresh()"/></a>
 								</div>
 								<div class="ui-block-b">
 									<a href="#home"><img src="img/DrinkbotLogolight.jpg" /></a>
 								</div>
 								<div class="ui-block-c">
-									<a href="#addSection"><img src="img/addIcon.jpg" /></a>
+									<a href="#addSection"><img src="img/addIcon copy1.jpg" /></a>
 								</div>
+					
 						</div>
 					</div>
-					
 					
 					<div data-role="content" data-theme="a" class="addSettings">
 						<h2>Add New Drink</h2>
@@ -112,8 +120,15 @@
 					
 				</div>   
 					
-				<div data-role="footer" data-position="fixed" data-theme="b" class="footer-style" data-tap-toggle="false" >
-					<a href="" data-role="none" ><h4>SAVE</h4></a>
+				<div data-role="footer" data-position="fixed" data-theme="b" class="footer-style" data-tap-toggle="false" >			
+					<div class="my-footer-grid ui-grid-a">
+								<div class="ui-block-a" >
+									<a href="" onclick=""  style="color: #9e9bae;" >ERASE</a>
+								</div>
+								<div class="ui-block-b"  >
+									<a href="" onclick=""  style="color: #9e9bae;" >SAVE</a>
+								</div>
+					</div>					
 				</div>
 		</section>		
 		
@@ -121,44 +136,89 @@
 		
 		<section id="settingsSection" data-role="page" data-theme="a">
 
-					<div data-role="header" data-position="fixed" data-theme="a"  class="header-style" data-tap-toggle="false" >
+					<div data-role="header" data-position="fixed"  data-tap-toggle="false" class="header-style" data-theme="a">
 						<div class="my-header-grid ui-grid-b">
 								<div class="ui-block-a">
-									<a href=""><img src="img/recycleIcon.jpg" /></a>
+									<a href=""><img src="img/recycleIcon copy.jpg"  onclick="refresh()"/></a>
 								</div>
 								<div class="ui-block-b">
 									<a href="#home"><img src="img/DrinkbotLogolight.jpg" /></a>
 								</div>
 								<div class="ui-block-c">
-									<a href="#addSection"><img src="img/addIcon.jpg" /></a>
+									<a href="#addSection"><img src="img/addIcon copy1.jpg" /></a>
 								</div>
+					
 						</div>
 					</div>
 					
 					
-				<div data-role="content" data-theme="a" class="addSettings">
-						<h2>Settings</h2>
-					    <form name="settingsForm" action="" onsubmit="return settingsFormf();"  data-ajax="false" >
+				<div data-role="content" data-theme="a" class="addSettings contentNoPadding">
+						<p>Settings</p>
+						<p> &nbsp </p>
+					    <form id="settingsForm" name="settingsForm" action="" onsubmit="return settingsFormf();"  data-ajax="false" >
 
 									<br />
-									<label id="unitIDLabel" for="unitID" >unitID:</label>
-									<input type="text" name="unitID" id="unitID" value="" placeholder="unitID"/>
+									<label id="unitIDLabel" for="unitID" >UnitID:</label>
+									<input type="text" name="unitID" id="unitID" value="" placeholder="unitID"  />
 									<br />
 									<label id="accessTokenLabel" for="accessToken" >Access Token:</label>
-									<input type="text" name="accessToken" id="accessToken" value="" placeholder="Access Token"/>
+									<input type="text" name="accessToken" id="accessToken" value="" placeholder="Access Token" />
 									<br />
-									<label id="drinkDatabaseLabel" for="drinkDatabase" >Drink Database:</label>
-									<input  type="text" name="drinkDatabase" id="drinkDatabase" value="" placeholder="Drink Database"/>
+									<label id="drinkDatabaseLabel" for="drinkDatabase" >Database:</label>
+									<input  type="text" name="drinkDatabase" id="drinkDatabase" value="" placeholder="Drink Database" />
 
-									<input type="submit" value="Submit"  id="submit" data-role="button" data-icon="check">
 
 						</form>
 
-				</div>   
-				<div data-role="footer" data-position="fixed" data-theme="b" class="footer-style" data-tap-toggle="false" >
-					<a href="#home" data-role="none" onclick="deleteSettings();"><h4>DELETE SETTINGS</h4></a>
-				</div>					
+				</div>  
+				
+				<div data-role="footer" data-position="fixed" data-theme="b" class="footer-style" data-tap-toggle="false" >			
+					<div class="my-footer-grid ui-grid-a">
+								<div class="ui-block-a" >
+									<a href="" onclick="deleteSettings();"  style="color: #9e9bae;" >ERASE</a>
+								</div>
+								<div class="ui-block-b" >
+									<a href="" onclick="$('#settingsForm').submit();" style="color: #9e9bae;">SAVE</a>
+								</div>
+					</div>					
+				</div>
+				
+		</section>
+		
+		
+		<section id="empty" data-role="page" data-theme="a">
 
+							<div data-role="header" data-position="fixed"  data-tap-toggle="false" class="header-style" data-theme="a">
+								<div class="my-header-grid ui-grid-b">
+										<div class="ui-block-a">
+											<a href=""><img src="img/recycleIcon copy.jpg"  onclick="refresh()"/></a>
+										</div>
+										<div class="ui-block-b">
+											<a href="#home"><img src="img/DrinkbotLogolight.jpg" /></a>
+										</div>
+										<div class="ui-block-c">
+											<a href="#addSection"><img src="img/addIcon copy1.jpg" /></a>
+										</div>
+								</div>
+							</div>
+							
+							
+							<div data-role="content" id="content" data-theme="a" class="noLine">
+							
+							</div>
+							   
+							</div>   
+							
+				<div data-role="footer" data-position="fixed" data-theme="b" class="footer-style" data-tap-toggle="false" >			
+					<div class="my-footer-grid ui-grid-a">
+								<div class="ui-block-a" >
+									<a href="" onclick="deleteSettings();"  style="color: #9e9bae;" >ERASE</a>
+								</div>
+								<div class="ui-block-b" >
+									<a href="" onclick="$('#settingsForm').submit();" style="color: #9e9bae;">SAVE</a>
+								</div>
+					</div>					
+				</div>
 		</section>
 		
 	<script type="text/javascript">

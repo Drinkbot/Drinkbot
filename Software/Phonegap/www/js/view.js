@@ -1,41 +1,12 @@
-$(function(){
-/*	$( "#cosmopolitan" ).bind( "click", function () {
-			pour.drink("Cosmopolitan");
-	});
-	$( "#cubaLibre" ).bind( "click", function () {
-			pour.drink("Cuba Libre");
-	});
-	$( "#daiquiri" ).bind( "click", function () {
-			pour.drink("Daiquiri");
-	});
-	$( "#firefighter" ).bind( "click", function () {
-			pour.drink("Firefighter");
-	});
-	$( "#margarita" ).bind( "click", function () {
-			pour.drink("Margarita");
-	});
-	$( "#mojito" ).bind( "click", function () {
-			pour.drink("Mojito");
-	});
-	$( "#moscowMule" ).bind( "click", function () {
-			pour.drink("Moscow Mule");
-	});
-	$( "#p2" ).bind( "click", function () {
-			pour.drink("P2");
-	});
-	$( "#screwdriver" ).bind( "click", function () {
-			pour.drink("Screwdriver");
-	});	
-	$( "#whiskeySour" ).bind( "click", function () {
-			pour.drink("Whiskey Sour");
-	}); */
-});
+
+
+// ======================================= HOME ======================================
 
 $(document).on("pagebeforeshow", "#home", function (){
 	if($.jStorage.get("data")){
 			var list;
 			var grid = true;
-			var json = JSON.parse($.jStorage.get("data"));
+			var json = JSON.parse(model.getJson());
 			var list = '<div class="ui-grid-a">';
 			for (i = 0; i < json.length; i++){
 				if (grid) { 
@@ -56,15 +27,18 @@ $(document).on("pagebeforeshow", "#home", function (){
 	}
 });
 
+// ======================================= SETTINGS ======================================
+
+
 $(document).on("pagebeforeshow", "#settingsSection", function (){
-	if ($.jStorage.get("unit_ID") != null){
-		document.settingsForm.unitID.value = $.jStorage.get("unit_ID");
+	if ($.jStorage.get("unitID_storage") != null){
+		document.settingsForm.unitID.value = $.jStorage.get("unitID_storage");
 	}
-	if ($.jStorage.get("access_Token") != null){
-		document.settingsForm.accessToken.value = $.jStorage.get("access_Token");	
+	if ($.jStorage.get("accessToken_storage") != null){
+		document.settingsForm.accessToken.value = $.jStorage.get("accessToken_storage");	
 	}
-	if ($.jStorage.get("drink_Database") != null){
-		document.settingsForm.drinkDatabase.value = $.jStorage.get("drink_Database");	
+	if ($.jStorage.get("drinkDatabase_storage") != null){
+		document.settingsForm.drinkDatabase.value = $.jStorage.get("drinkDatabase_storage");	
 	}
 
 	$("#settingsSection").trigger("create");
