@@ -37,7 +37,7 @@ core-librae (111111111111111111111111) is online
 
 ### Variables
 ```
-$ spark get DrinkbotPrototype temperature
+$ spark get core-librae temperature
 1454
 ```
 or
@@ -60,7 +60,7 @@ $ curl https://api.spark.io/v1/devices/111111111111111111111111/temperature?acce
 ### Functions
 
 ```
-$ spark call DrinkbotPrototype setpumps "P0:10;P1:00;P2:20;P3:05;P4:07;P5:15;P6:00;P7:10"
+$ spark call core-librae setpumps "P0:10;P1:00;P2:20;P3:05;P4:07;P5:15;P6:00;P7:10"
 0
 ```
 or
